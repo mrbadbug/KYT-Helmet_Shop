@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYT Helmet Shop - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    /* Animation for the form */
+    @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-in-up {
+        animation: slideInUp 0.7s ease-out forwards;
+        animation-delay: 0.3s; /* Optional: waits for logo to fade in */
+        opacity: 0; /* Important: starts hidden */
+    }
+</style>
+</head>
+<body>
+<div class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="max-w-md w-full space-y-8">
+        <body id="page" class="text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu7TGQ_f_jAa184DVJwflYbkQ6hb8fRfjn_A&s">
+            <h2 class="text-3xl font-extrabold text-black solid-900 pos-center">Experience the best</h2>
+            <div id="message-area" class="text-center p-1 rounded-md"></div>
+        </body>
+        <!-- LOGIN FORM -->
+        <div class="container">
+           <div id="login-form" class="space-y-6 slide-in-up"> 
+               <h3 class="text-center text-xl font-bold text white">You must Sign in first</h3>
+               <div class="space-y-4">
+                   <input id="login-email" type="email" placeholder="Email" class="w-full px-3 py-2 border rounded">
+                   <input id="login-password" type="password" placeholder="Password" class="w-full px-3 py-2 border rounded">
+               </div>
+               <button id="login-button" class="w-full py-2 px-4 rounded text-white bg-red-600 hover:bg-red-700">Sign in</button>
+               <p class="text-sm text-center">
+                   Don't have an account?<br> <button id="show-register-form" class="hover:bg-red-700">Register</button>
+               </p>
+           </div>
+        </div>
+        <!-- REGISTER FORM -->
+        <div id="register-form" class="space-y-6 hidden">
+            <h3 class="text-center text-xl font-bold text-gray-800">Create Account</h3>
+            <div class="space-y-4">
+                <input id="name" type="text" placeholder="First name" class="w-full px-3 py-2 border rounded">
+                <input id="surname" type="text" placeholder="Surname" class="w-full px-3 py-2 border rounded">
+                <input id="register-username" type="text" placeholder="Username" class="w-full px-3 py-2 border rounded">
+                <input id="register-email" type="email" placeholder="Email" class="w-full px-3 py-2 border rounded">
+                <input id="register-phone" type="mobile" placeholder="Phone no" class="w-full px-3 py-2 border rounded">
+                <input id="register-password" type="password" placeholder="Create a Password" class="w-full px-3 py-2 border rounded">
+                <input id="retype-password" type="password" placeholder="Retype password" class="w-full px-3 py-2 border rounded">
+            </div>
+            <button id="register-button" class="w-full py-2 px-4 rounded text-white bg-red-600 hover:bg-red-700">Register</button>
+            <p class="text-sm text-center">
+                Already have an account? <button id="show-login-form" class="text-black-600 font-medium hover:bg-black-700">Login</button>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Body & general styles */
+#page {
+    font-family: 'Arial', sans-serif;
+    background-color: steelblue;
+    margin: 20px;
+    background-image: url(https://photos.worldsbk.com/2025/09/05/bulega-51426_r9_jdr_wsbk_action_full.jpg);
+    background-attachment: scroll;
+    display: flex;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    -webkit-text-fill-color: black;
+    margin: 20px;
+    font-style: bold;
+    background-size: 65% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    justify-items: center;
+    text-align: left;
+    
+}
+header{
+    -webkit-text-fill-color: aliceblue;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.product-card {
+    background-color: black;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 250px;
+    box-shadow: black;
+    height: fit-content;
+}
+
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content h3{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+}
+
+.card-content p{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-display: swap;
+}
+
+.card-content button {
+    background-color: gray;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    -webkit-text-fill-color: white;
+}
+
+.card-content button:hover {
+    background-color: green;
+    transform: scale(1.05);
+}
+
+.checkout-btn {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+#toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #065f46;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 100;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container{
+    padding-right: 20px;
+    margin: 20px;
+}
+.text-center img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  height: 100px;
+  width: 200px;
+}
+#cart-sidebar{
+    -webkit-text-fill-color: white;
+    background-color: black;
+}
+
+.footer-marquee {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background-color: #1f2937; 
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-right 15s linear infinite; 
+    color: white; 
+}
+
+.marquee span {
+    display: inline-block;
+    padding-right: 100%; 
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}

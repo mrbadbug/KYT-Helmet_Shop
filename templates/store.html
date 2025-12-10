@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYT Helmet Shop - Store</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gray-100">
+
+<!-- Header -->
+<header class="w-full bg-black text-white p-4 flex justify-between items-center sticky top-0 z-[999]">
+    <h1 class="text-2xl font-bold" style="-webkit-text-fill-color: white;">KYT Helmet Shop</h1>
+    <div class="flex items-center space-x-4">
+        <a href="{{ url_for('buy') }}" class="px-3 py-1 rounded hover:bg-blue-400" style="-webkit-text-fill-color: white;">Click here to Buy One</a>
+        <button id="logout-btn" class="px-3 py-1 rounded hover:bg-blue" style="color: black; background-color: purple; ">Logout</button>
+        <button id="open-cart" class="bg-blue-400 text-black px-3 py-1 rounded hover:bg-black-500 transition" style="-webkit-text-fill-color: black; background-color: green;">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </div>
+</header>
+
+<!-- Scrolling Text -->
+<footer class="footer-marquee">
+    <div class="marquee">
+        Welcome to KYT Helmet Shop — High-quality helmets for maximum safety. Explore our latest collection now!
+    </div>
+</footer>
+
+<div id="toast"></div>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-black shadow-lg transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+    <div class="flex justify-between items-center p-4 border-b">
+        <h2 class="text-xl font-bold">Your Cart</h2>
+        <button id="close-cart" class="text-red-600 font-bold text-xl">&times;</button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
+    <div class="p-4 border-t">
+        <p class="font-bold text-lg">Total: $<span id="cart-total">0.00</span></p>
+        <button id="sidebar-checkout" class="w-full checkout-btn mt-2">Checkout</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/store.js') }}"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="hero-section"></div>
+
+<style>
+
+.hero-section{
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  animation: animate 50s infinite ease-in-out;
+}
+.hero-section::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+@keyframes animate{
+  0%{
+    background-image: url(static/images/home-slider-2.jpg);
+  }
+  10%{
+    background-image: url(static/images/quartararos-test-the-m1-wearing-a-kyt-helmet-and-using-a-v0-gq7eooshbc3e1.jpg);
+  }
+  20%{
+    background-image: url(static/images/BJND3325_P_1.webp);
+  }
+  30%{
+    background-image: url(static/images/NZ-Race_featured_blake_davis.webp);
+  }
+  40%{
+    background-image: url(static/images/Cal-Crutchlow.jpg);
+  }
+  50%{
+    background-image: url(static/images/slider_01.webp);
+  }
+  60%{
+    background-image: url(static/images/kyt_banner.webp);
+  }
+  70%{
+    background-image: url(static/images/gez7u7.jpg);
+  }
+  80%{
+    background-image: url(static/images/Cascos-moto-KYT-Helmets-Ramirez.jpg);
+  }
+  90%{
+    background-image: url(static/images/slider_03.webp);
+  }
+  100%{
+    background-image: url(static/images/g8.jpg);
+  }
+}
+</style>
+
+</body>
+</html>
+
