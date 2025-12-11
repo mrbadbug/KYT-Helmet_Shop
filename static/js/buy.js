@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = [];
 
-    // --------------- Toast ----------------
     function showMessage(msg, error = false) {
         toast.textContent = msg;
         toast.style.position = "fixed";
@@ -27,24 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => toast.style.opacity = "0", 2500);
     }
 
-    // --------------- Logout ----------------
     logoutBtn?.addEventListener("click", () => {
         localStorage.removeItem("access_token");
         window.location.href = "/";
     });
 
-    // --------------- Cart Sidebar ----------------
     openCartBtn?.addEventListener("click", () => cartSidebar.classList.remove("translate-x-full"));
     closeCartBtn?.addEventListener("click", () => cartSidebar.classList.add("translate-x-full"));
 
-    // Click outside cart to close
     document.addEventListener("click", (e) => {
         if (!cartSidebar.contains(e.target) && !openCartBtn.contains(e.target)) {
             cartSidebar.classList.add("translate-x-full");
         }
     });
 
-    // --------------- Update Cart ----------------
     function updateCartSidebar() {
         cartItemsContainer.innerHTML = "";
         let total = 0;
@@ -90,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cartCountEl.textContent = count;
     }
 
-    // --------------- Add to Cart ----------------
     const addButtons = document.querySelectorAll(".product-card button");
 
     addButtons.forEach((btn) => {
@@ -113,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --------------- Checkout Button ----------------
     checkoutBtn?.addEventListener("click", () => {
         if (cart.length === 0) {
             showMessage("Cart is empty!", true);
