@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
-    /* Animation for the form */
+
     @keyframes slideInUp {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
@@ -15,8 +15,8 @@
 
     .slide-in-up {
         animation: slideInUp 0.7s ease-out forwards;
-        animation-delay: 0.3s; /* Optional: waits for logo to fade in */
-        opacity: 0; /* Important: starts hidden */
+        animation-delay: 0.3s; 
+        opacity: 0; 
     }
 </style>
 </head>
@@ -28,7 +28,7 @@
             <h2 class="text-3xl font-extrabold text-black solid-900 pos-center">Experience the best</h2>
             <div id="message-area" class="text-center p-1 rounded-md"></div>
         </body>
-        <!-- LOGIN FORM -->
+
         <div class="container">
            <div id="login-form" class="space-y-6 slide-in-up"> 
                <h3 class="text-center text-xl font-bold text white">You must Sign in first</h3>
@@ -42,7 +42,7 @@
                </p>
            </div>
         </div>
-        <!-- REGISTER FORM -->
+
         <div id="register-form" class="space-y-6 hidden">
             <h3 class="text-center text-xl font-bold text-gray-800">Create Account</h3>
             <div class="space-y-4">
