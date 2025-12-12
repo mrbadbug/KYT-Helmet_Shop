@@ -9,19 +9,14 @@
 </head>
 <body class="bg-gray-100">
 
-<!-- Header -->
 <header class="w-full bg-black text-white p-4 flex justify-between items-center sticky top-0 z-[999]">
     <h1 class="text-2xl font-bold" style="-webkit-text-fill-color: white;">KYT Helmet Shop</h1>
     <div class="flex items-center space-x-4">
         <a href="{{ url_for('buy') }}" class="px-3 py-1 rounded hover:bg-blue-400" style="-webkit-text-fill-color: white;">Click here to Buy One</a>
         <button id="logout-btn" class="px-3 py-1 rounded hover:bg-blue" style="color: black; background-color: purple; ">Logout</button>
-        <button id="open-cart" class="bg-blue-400 text-black px-3 py-1 rounded hover:bg-black-500 transition" style="-webkit-text-fill-color: black; background-color: green;">
-            🛒 <span id="cart-count">0</span>
-        </button>
     </div>
 </header>
 
-<!-- Scrolling Text -->
 <footer class="footer-marquee">
     <div class="marquee">
         Welcome to KYT Helmet Shop — High-quality helmets for maximum safety. Explore our latest collection now!
